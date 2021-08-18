@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="import" href="https://fonts.google.com/specimen/Red+Hat+Display">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<style>
+  @import url("https://fonts.google.com/specimen/Red+Hat+Display");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Font-size: 16px;
+}
+body {
+  font-size: var(--Font-size);
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  background-color: var(--Pale-blue);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.profile_card {
+  width: 88%;
+  max-width: 600px;
+  margin-top: 7rem;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+.profile_card .hero {
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.section .title {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+.section .Description {
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 1.5rem 1rem;
+  color: var(--Desaturated-blue);
+  line-height: 2rem;
+  text-align: center;
+}
+.card_section {
+  background-color: var(--Very-pale-blue);
+  width: 100%;
+  border-radius: 1.5rem;
+  margin: 0.8rem 0;
+  padding: 1.6rem 1.2rem;
+}
+.card_section .Icon_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.plan {
+  color: var(--Dark-blue);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.plan p {
+  color: var(--Desaturated-blue);
+  font-size: 1.4rem;
+  font-weight: 700;
+  opacity: 0.5;
+}
+a {
+  color: var(--Bright-blue);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+  opacity: 0.75;
+}
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button1 {
+  background-color: var(--Bright-blue);
+  font-size: 1.5rem;
+  color: #fff;
+  width: 100%;
+  padding: 1.2rem;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px hsl(245, 75%, 52%);
+}
+.button1:hover {
+  opacity: 0.8;
+}
+.order_button {
+  color: var(--Desaturated-blue);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.order_button:hover {
+  color: var(--Dark-blue);
+  opacity: 1;
+}
+@media screen and (min-height: 1440px) {
+  body {
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+  .container {
+    align-items: center;
+  }
+  .profile_card {
+    margin-top: unset;
+  }
+  .section {
+    padding: 4rem 4.5rem;
+  }
+  .section .title {
+    font-size: 2.8rem;
+  }
+  .section .Description {
+    font-size: 1.6rem;
+    line-height: 2.55rem;
+  }
+  .plan {
+    padding: 2.2rem 2.4rem;
+    margin: 0.4rem;
+    font-size: 1.6rem;
+  }
+}
+
+</style>
+<body>
+    <div class="container">
+      <div class="profile_card">
+        <img class="hero" src="./images/illustration-hero.svg" alt="picture">
+        <div class="section">
+          <h1 class="title">Order Summary</h1>
+          <p class="Description">You can now listen to millions of songs, audiobooks, and podcasts on any 
+            device anywhere you like!</p>
+        
+        <div class="card_section">
+          <div class="Icon_section">
+            <img src="./images/icon-music.svg" alt="music">
+            <div class="plan">
+              <h4>Annual Plan</h4>
+              <p>$59.99/year</p>
+            </div>
+            <div class="Atag">
+            <a href="#">Change</a>
+            </div>
+          </div>
+        </div>
+        <div class="button">
+          <button class="button1">Proceed to Payment</button>
+        </div>
+        <div>
+          <a class="order_button"class="" href="#"> Cancel Order</a>
+        </div>
+      
+      </div>
+    </div>
+</body>
+</html>
